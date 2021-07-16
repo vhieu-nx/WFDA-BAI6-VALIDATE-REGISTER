@@ -1,0 +1,11 @@
+<h1>Form dang nhap</h1>
+<form [formGroup]="login" class="col-md-6 offset-md-3">
+  <input formControlName="email" type="email" class="form-control">
+    <input formControlName="password">
+  <div class="alert alert-danger" role="alert"
+       *ngIf=
+         "login.hasError('emailpasswordnotmatch') && login.get('password').touched">
+    Password or email does not match!
+  </div>
+</form>
+
